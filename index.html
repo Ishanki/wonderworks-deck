@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wonderworks — 25 Literary Blueprints</title>
+  <meta name="description" content="An interactive card deck of the 25 literary blueprints from Angus Fletcher's Wonderworks — with the neuroscience behind each, and how to apply them in everyday life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="header-brand">
+        <h1>Wonderworks</h1>
+        <p class="header-sub">25 Literary Blueprints for the Mind</p>
+      </div>
+      <nav class="view-nav" role="tablist" aria-label="Deck views">
+        <button class="nav-btn active" data-view="grid" role="tab" aria-selected="true">The Deck</button>
+        <button class="nav-btn" data-view="mood" role="tab" aria-selected="false">By Mood</button>
+        <button class="nav-btn" data-view="draw" role="tab" aria-selected="false">Draw a Card</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Grid view -->
+    <section id="view-grid" class="view active" role="tabpanel" aria-label="All 25 cards">
+      <div class="section-intro">
+        <p>Click any card to explore the blueprint, its neuroscience, and how to use it in your life.</p>
+      </div>
+      <div class="cards-grid" id="cardsGrid"></div>
+    </section>
+
+    <!-- Mood view -->
+    <section id="view-mood" class="view" role="tabpanel" aria-label="Find a blueprint by mood">
+      <div class="section-intro mood-intro">
+        <p>How are you feeling right now? Select a state to find your blueprint.</p>
+      </div>
+      <div class="mood-grid" id="moodGrid"></div>
+    </section>
+
+    <!-- Draw view -->
+    <section id="view-draw" class="view" role="tabpanel" aria-label="Draw a random card">
+      <div class="draw-area" id="drawArea">
+        <div class="draw-prompt">
+          <div class="draw-icon">✦</div>
+          <p>Shuffle the deck and draw one card</p>
+          <button class="draw-btn" id="drawBtn">Draw a Card</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Card detail modal -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Blueprint detail">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous blueprint">&#8249;</button>
+      <button class="modal-nav modal-next" id="modalNext" aria-label="Next blueprint">&#8250;</button>
+      <div class="modal-image-panel" id="modalImagePanel"></div>
+      <div class="modal-content-panel" id="modalContentPanel"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-attribution">
+        Based on <em>Wonderworks: The 25 Most Powerful Inventions in the History of Literature</em>
+        by <strong>Angus Fletcher</strong> (2021, Simon &amp; Schuster).
+        All literary blueprints, neuroscientific analyses, and everyday applications are drawn from Fletcher's work.
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
