@@ -152,18 +152,18 @@ function openModal(id) {
     </div>
 
     <div class="modal-section">
-      <div class="modal-section-label">The Neuroscience</div>
-      <p class="modal-section-text">${card.neuroscience}</p>
+      <div class="modal-section-label">The Mechanism</div>
+      <p class="modal-section-text">${card.mechanism}</p>
     </div>
 
     <div class="modal-section">
-      <div class="modal-section-label">In Everyday Life</div>
-      <p class="modal-section-text">${card.everyday}</p>
+      <div class="modal-section-label">An Example from Literature</div>
+      <p class="modal-section-text">${card.example}</p>
     </div>
 
     <div class="modal-practice">
-      <div class="modal-practice-label">Try It Now</div>
-      <p class="modal-practice-text">${card.practice}</p>
+      <div class="modal-practice-label">How to Try It</div>
+      <p class="modal-practice-text">${card.howToTry}</p>
     </div>
 
     ${card.imageCredit
